@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="main">
+        <h1 id="question">...</h1>
+        <input type="radio" id="a"  class="answer"><label id="label1">........</label><br>
+        <input type="radio" id="b"  class="answer"><label id="label2">........</label><br>
+        <input type="radio" id="c"  class="answer"><label id="label3">........</label><br>
+        <button id="submit">Next</button>
+    </div>
+
+
+    <script>
+   
+   var quiz=[
+       {
+        question: "What does CSS stand for?",
+        a: "Central Style Sheets",
+        b: "Cascading Style Sheets",
+        c: "Cascading Simple Sheets",
+        d: "Cars SUVs Sailboats",
+        correct: "b",
+    },
+    {
+        question: "What does HTML stand for?",
+        a: "Hypertext Markup Language",
+        b: "Hypertext Markdown Language",
+        c: "Hyperloop Machine Language",
+        d: "Helicopters Terminals Motorboats Lamborginis",
+        correct: "a",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+    },
+];
+
+var question=document.getElementById("question");
+var option1=document.getElementById("label1");
+var option2=document.getElementById("label2");
+var option3=document.getElementById("label3");
+var answer=document.querySelectorAll(".answer");
+var btn=document.getElementById("submit");
+
+var currentquestion=0;
+var score=0;
+
+function selectHatao(){
+    for (var i=0;i<answer.length;i++){
+         answer[i].checked=false;
+    }
+}
+
+    </script>
+</body>
+</html>
